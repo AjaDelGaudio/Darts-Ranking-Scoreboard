@@ -9,6 +9,7 @@ $("#add").click(function(e){
       var currentScore =  obj[player];
       var playerId = player.split(" ");
 
+
       if ( player in obj ){
         currentScore = (currentScore + points);
         obj[player] = currentScore;
@@ -18,7 +19,9 @@ $("#add").click(function(e){
         obj[player] = currentScore;
         $( "ul" ).append( "<li score='" + currentScore + "' id='" + playerId + "'>" + player + ", " +  currentScore + " pts" + "</li>" );
      }
+  $('input').val('');
   });
+
   $(function(){
     var elems = $('#rankings').children('li').remove();
     elems.sort(function(a,b){
@@ -26,11 +29,12 @@ $("#add").click(function(e){
     });
     $('#rankings').append(elems);
   });
-
   $("li").each(function(){
-    
   });
 });
+
+
+
 
 $("#clear").click(function(e){
   location.reload();
