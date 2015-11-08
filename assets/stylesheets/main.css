@@ -468,7 +468,7 @@ th {
   min-height: 10px;
 }
 
-.rankings-list-area {
+#rankings-list-area {
   border-color: grey;
   border: 2px;
   background: #ffff00;

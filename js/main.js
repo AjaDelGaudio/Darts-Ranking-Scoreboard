@@ -6,7 +6,7 @@ $("#add").click(function(e){
       var res = value.split(",");
       var player = res[0];
       var points = parseInt(res[1]);
-      var currentScore =  obj[player];
+      var currentScore = obj[player];
       var playerId = player.split(" ");
 
 
@@ -31,10 +31,12 @@ $("#add").click(function(e){
   });
   $("li").each(function(){
   });
+
+  $( "#rankings-list-area" ).scroll(function() {
+    $( "#log" ).append( "<div>Handler for .scroll() called.</div>" );
+  });
+
 });
-
-
-
 
 $("#clear").click(function(e){
   location.reload();
